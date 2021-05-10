@@ -18,8 +18,9 @@
 </head>
 <body>
     <mgt-msal-provider client-id="05d70a25-afea-419b-bda0-bb7f14f02a31"></mgt-msal-provider>
+    <script type="module" src="node_modules/@microsoft/mgt/dist/es6/index.js"></script>
    <mgt-person person-query="me" view="twoLines"></mgt-person>
-    <div class="row">
+    <div class="row" style="margin-top: 40px; margin: 0 auto;>
         <div class="col-md-3">
             <mgt-people-picker ></mgt-people-picker>
         </div>
@@ -28,38 +29,7 @@
         </div>  
     </div>
     
-    <div class="row">
-        <!-- Retemplate the entire person component -->
-<mgt-person>
-  <template>
-    <div data-if="personImage">
-      <img src="{{personImage}}" />
-    </div>
-    <div data-else>
-      {{person.displayName}}
-    </div>
-  </template>
-</mgt-person>
-
-<!-- Retemplate the line properties -->
-<mgt-person view="threeLines">
-  <template data-type="line1">
-    <div>
-      Hello, my name is: {{person.displayName}}
-    </div>
-  </template>
-  <template data-type="line2">
-    <div>
-      Super cool
-    </div>
-  </template>
-  <template data-type="line3">
-    <div>
-      Loves MGT
-    </div>
-  </template>
-</mgt-person>
-    </div>   
+    
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
